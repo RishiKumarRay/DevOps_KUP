@@ -112,11 +112,11 @@ When using ‘awk’ we enclose patterns in curly braces. Both pattern and actio
 
 awk '{print}' example.txt  (here since pattern is not specified it will print all)
 
-awk '/manager/ {printf}' example
+awk '/manager/ {print}' example.txt
 
 it wil print containing managers.
 
-awk ‘NR==3, NR==6 {print NR,$0}’ example
+awk ‘NR==3, NR==6 {print NR,$0}’ example.txt
 
   It will display from line number 3 to number 6.
 
@@ -126,8 +126,8 @@ sed 's/manager/operations/g' test
 
 To replace only on a specific line, specify the file line as below where we are replacing on the third line.
 
-sed '3 s/manager/operations/'g  test 
+sed '3 's/manager/operations/g'  test 
 
 here we wil also use i flag to save the file 
 
-sed -i s/manager/operations/'g test
+sed -i 's/manager/operations/g' test
