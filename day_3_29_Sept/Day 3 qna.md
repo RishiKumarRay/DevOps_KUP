@@ -12,15 +12,15 @@ There are 5 tables in iptables :
 
  **Que 2: What are prot, opt , Source , and Destinations ?**
 
-***prot:-***This defines the protocol (TCP,IP) of the packet.
+   prot:-This defines the protocol (TCP,IP) of the packet.
 
-***source:-***This tells the source address of the packet.
+   source:- This tells the source address of the packet.
 
-***destination:-***This defines the destination address of the packet
+   destination:- This defines the destination address of the packet
 
-***Prot***:- Special options for that specific rule
+   opt :- Special options for that specific rule
 
-Que 3:  Why rules are added to the top?
+**Que 3:  Why rules are added to the top?**
 
 The Rules we set in the iptables are checked from the topmost rules to the bottom. Whenever a packet passes any of the top rules, it is allowed to pass the firewall. The lower rules are not checked, So that's why rules are added to the top.
 
@@ -42,9 +42,9 @@ Reject - here this is similar to Reject but in this case a message is sent to th
 
 Yes we can do this and we can block the website by its domain name with using this command :
 
-iptable -A -I input -s www.facebook.com DROP
+iptable -I INPUT -s www.facebook.com -j DROP
 
-Que 6: How can we persist rules in an iptable?
+**Que 6: How can we persist rules in an iptable?**
 
 Inorder to do this first we have to download persistant package then we can run this command
 
