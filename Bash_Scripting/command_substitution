@@ -1,0 +1,3 @@
+#!/bin/bash
+lsresult=$(ls)
+echo "the files are:$(ls)"

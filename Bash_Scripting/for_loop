@@ -1,0 +1,7 @@
+#!/bin/bash
+arr="My name is rishi"
+for i in ${arr[@]} 
+do
+echo $i
+done
+ 
